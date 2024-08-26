@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        ".bingx.com",
+        ".pinoex.com",
+        ".mexc.com",
+        ".bitget.com"
+      ]
+    },
+    {
+      "domain_keyword": [
+        "bingx",
+        "pinoex",
+        "mexc",
+        "bitget"
+      ]
+    }
+  ]
+}
