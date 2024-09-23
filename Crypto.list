@@ -1,0 +1,12 @@
+# 域名后缀匹配
+DOMAIN-SUFFIX,bingx.com
+DOMAIN-SUFFIX,pinoex.com
+DOMAIN-SUFFIX,mexc.com
+DOMAIN-SUFFIX,bitget.com
+
+# 域名关键字匹配
+DOMAIN-KEYWORD,bingx
+DOMAIN-KEYWORD,pinoex
+DOMAIN-KEYWORD,mexc
+DOMAIN-KEYWORD,bitget
+DOMAIN-KEYWORD,mokexweb
