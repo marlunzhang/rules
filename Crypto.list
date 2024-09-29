@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,bitget.com
 
 # 域名关键字匹配
 DOMAIN-KEYWORD,bingx
+DOMAIN-KEYWORD,bybit
 DOMAIN-KEYWORD,pinoex
 DOMAIN-KEYWORD,mexc
 DOMAIN-KEYWORD,bitget
