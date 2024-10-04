@@ -39,6 +39,7 @@ config.outbounds.map(i => {
   }
   if (['🇺🇲 美国节点', '🇺🇲 美国自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /🇺🇸|US|us|美国|美|United States/i))
+  }
   if (['♻️ 低倍自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /0.1x|0.20x|0.50x/i))
   }
