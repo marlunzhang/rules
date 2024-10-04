@@ -1,45 +1,85 @@
 {
   "log": {
-    "level": "info",
+    "level": "error",
     "timestamp": true
   },
   "experimental": {
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
       "external_ui": "ui",
-      "secret": "",
       "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
       "external_ui_download_detour": "🎯 全球直连",
+      "secret": "469893900",
       "default_mode": "rule"
       }
     },
   "dns": {
     "servers": [
-      {"tag": "proxyDns", "address": "tls://8.8.8.8", "address_resolver": "localDns", "address_strategy": "ipv4_only", "detour": "🚀 节点选择"},
-      {"tag": "localDns", "address": "223.5.5.5", "detour": "🎯 全球直连"},
-      {"tag": "block", "address": "rcode://success"}
+      {
+        "tag": "国际 DNS",
+        "address": "https://dns.google/dns-query",
+        "address_resolver": "系统 DNS",
+        "detour": "🚀 节点选择"
+      },
+      {
+        "tag": "中国 DNS",
+        "address": "https://dns.alidns.com/dns-query",
+        "address_resolver": "系统 DNS",
+        "detour": "🎯 全球直连"
+      },
+      {
+        "tag": "系统 DNS",
+        "address": "local",
+        "detour": "🎯 全球直连"
+      }
     ],
     "rules": [
-      {"outbound": "any", "server": "localDns", "disable_cache": true},
-      {"rule_set": "geosite-cn", "server": "localDns"},
-      {"clash_mode": "direct", "server": "localDns"},
-      {"clash_mode": "global", "server": "proxyDns"},
-      {"rule_set": "geosite-geolocation-!cn", "server": "proxyDns"}
+      {
+        "outbound": "any",
+        "server": "中国 DNS",
+        "rewrite_ttl": 3600
+      },
+      {
+        "clash_mode": "direct",
+        "server": "中国 DNS",
+        "rewrite_ttl": 3600
+      },
+      {
+        "clash_mode": "global",
+        "server": "国际 DNS",
+        "rewrite_ttl": 3600
+      },
+      {
+        "rule_set": "geosite_private",
+        "server": "系统 DNS",
+        "rewrite_ttl": 3600
+      },
+      {
+        "rule_set": "geosite_cn",
+        "server": "中国 DNS",
+        "rewrite_ttl": 3600
+      }
     ],
-    "final": "localDns",
-    "strategy": "ipv4_only"
+    "final": "国际 DNS",
+    "strategy": "prefer_ipv4",
+    "disable_cache": false,
+    "disable_expire": false,
+    "independent_cache": true,
+    "reverse_mapping": false
   },
 
   "inbounds": [
     {
       "type": "tun",
       "inet4_address": "172.19.0.1/30",
+      "gso": false,
       "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
       "sniff": true,
+      "sniff_override_destination": true,
       "endpoint_independent_nat": false,
-      "stack": "system",
+      "stack": "mixed",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -53,7 +93,7 @@
       "listen": "0.0.0.0",
       "listen_port": 2080,
       "sniff": true,
-      "users": []
+      "sniff_override_destination": true
     }
   ],
 
@@ -68,7 +108,7 @@
     { "tag": "📲 Telegram", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 低倍自动", "♻️ 自动选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇰🇷 韩国自动", "🇺🇲 美国自动", "🇸🇬 新加坡自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "🎵 TikTok", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 低倍自动", "♻️ 自动选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇰🇷 韩国自动", "🇺🇲 美国自动", "🇸🇬 新加坡自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "🎥 Netflix", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 低倍自动", "♻️ 自动选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇰🇷 韩国自动", "🇺🇲 美国自动", "🇸🇬 新加坡自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
-    { "tag": "🎬 Emby", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(JP|US)\d+ 0\.20x"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
+    { "tag": "🎬 Emby", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(JP|US).*0[.]20x"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
     { "tag": "🪟 Windows", "type": "selector", "outbounds": ["🎯 全球直连", "🚀 节点选择"] },
     { "tag": "☁ Onedrive", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 低倍自动", "♻️ 自动选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇰🇷 韩国自动", "🇺🇲 美国自动", "🇸🇬 新加坡自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换", "🎯 全球直连"] },
     { "tag": "🪟 Microsoft", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 低倍自动", "♻️ 自动选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇰🇷 韩国自动", "🇺🇲 美国自动", "🇸🇬 新加坡自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换", "🎯 全球直连"] },
