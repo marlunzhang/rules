@@ -1,6 +1,6 @@
 {
   "log": {
-    "level": "error",
+    "level": "info",
     "timestamp": true
   },
   "experimental": {
@@ -19,8 +19,7 @@
         "tag": "国际 DNS",
         "address": "https://dns.google/dns-query",
         "address_resolver": "系统 DNS",
-        "detour": "🚀 节点选择",
-        "client_subnet": "1.0.1.0"
+        "detour": "🚀 节点选择"
       },
       {
         "tag": "中国 DNS",
@@ -126,7 +125,8 @@
     { "tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["重置|到期|过期|剩余|套餐|刷新|导航|机场|通知"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
     { "tag": "GLOBAL", "type": "selector", "outbounds": ["♻️ 自动选择", "🎯 全球直连", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "🎯 全球直连", "type": "direct" },
-    { "tag": "dns-out", "type": "dns" }
+    { "tag": "dns-out", "type": "dns" },
+    { "tag": "🚫 阻断", "type": "block"}
   ],
   
   "route": {
@@ -138,6 +138,7 @@
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
+      { "rule_set": "ad", "outbound": "🚫 阻断" },
       { "rule_set": "geosite-github", "outbound": "💻 Github" },
       { "rule_set": "geosite-openai", "outbound": "🤖 OpenAI" },
       { "rule_set": "geosite-youtube", "outbound": "📹 YouTube" },
@@ -182,7 +183,8 @@
       { "tag": "geosite-bybit", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bybit.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-gateio", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/gateio.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-crypto", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/marlunzhang/rules/main/crypto.json", "download_detour": "🎯 全球直连" },
-      { "tag": "geosite-emby", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/marlunzhang/rules/main/emby.json", "download_detour": "🎯 全球直连" }
+      { "tag": "geosite-emby", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/marlunzhang/rules/main/emby.json", "download_detour": "🎯 全球直连" },
+      { "tag": "ad", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/REIJI007/AdBlock_Rule_For_Sing-box/main/adblock_reject.srs", "download_detour": "🎯 全球直连" }
     ]
   }
 }
