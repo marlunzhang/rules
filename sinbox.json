@@ -19,6 +19,7 @@
         "tag": "国际 DNS",
         "address": "https://dns.google/dns-query",
         "address_resolver": "系统 DNS",
+        "strategy": "prefer_ipv4",
         "detour": "🚀 节点选择"
       },
       {
@@ -53,9 +54,14 @@
         "rule_set": "geosite-cn",
         "server": "中国 DNS",
         "rewrite_ttl": 3600
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "国际 DNS",
+        "rewrite_ttl": 3600
       }
     ],
-    "final": "国际 DNS",
+    "final": "中国 DNS",
     "strategy": "prefer_ipv4",
     "disable_cache": false,
     "disable_expire": false,
