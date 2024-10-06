@@ -32,11 +32,6 @@
         "tag": "系统 DNS",
         "address": "local",
         "detour": "🎯 全球直连"
-      },
-      {
-        "tag": "block_dns",
-        "address": "rcode://refused",
-        "detour": "🎯 全球直连"
       }
     ],
     "rules": [
