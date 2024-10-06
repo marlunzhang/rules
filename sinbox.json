@@ -56,11 +56,6 @@
         "rewrite_ttl": 3600
       },
       {
-        "rule_set": "ad",
-        "server": "block_dns",
-        "rewrite_ttl": 3600
-      },
-      {
         "rule_set": "geosite-cn",
         "server": "中国 DNS",
         "rewrite_ttl": 3600
@@ -198,7 +193,6 @@
       { "tag": "geosite-windows", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/win-update.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-onedrive", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/onedrive.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-crypto", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-cryptocurrency.json", "download_detour": "🎯 全球直连" },
-      { "tag": "geosite-emby", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/marlunzhang/rules/main/emby.json", "download_detour": "🎯 全球直连" },
-      { "tag": "ad", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs", "download_detour": "🎯 全球直连" }    ]
+      { "tag": "geosite-emby", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/marlunzhang/rules/main/emby.json", "download_detour": "🎯 全球直连" }
   }
 }
