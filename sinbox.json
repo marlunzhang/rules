@@ -32,6 +32,11 @@
         "tag": "系统 DNS",
         "address": "local",
         "detour": "🎯 全球直连"
+      },
+      {
+        "tag": "block_dns",
+        "address": "rcode://refused",
+        "detour": "🎯 全球直连"
       }
     ],
     "rules": [
@@ -48,6 +53,11 @@
       {
         "clash_mode": "global",
         "server": "国际 DNS",
+        "rewrite_ttl": 3600
+      },
+      {
+        "rule_set": "ad",
+        "server": "block_dns",
         "rewrite_ttl": 3600
       },
       {
@@ -147,8 +157,7 @@
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
-      { "rule_set": "geosite-windows", "outbound": "🪟 Windows" },
-      { "rule_set": "ad", "outbound": "🚫 阻断" },
+      { "protocol": "quic", "outbound": "🚫 阻断" },
       { "rule_set": "geosite-github", "outbound": "💻 Github" },
       { "rule_set": "geosite-openai", "outbound": "🤖 OpenAI" },
       { "rule_set": "geosite-youtube", "outbound": "📹 YouTube" },
@@ -159,6 +168,7 @@
       { "rule_set": ["geoip-netflix", "geosite-netflix"], "outbound": "🎥 Netflix" },
       { "rule_set": "geosite-emby", "outbound": "🎬 Emby" },
       { "rule_set": ["geoip-apple", "geosite-apple"], "outbound": "🍎 Apple" },
+      { "rule_set": "geosite-windows", "outbound": "🪟 Windows" },
       { "rule_set": "geosite-onedrive", "outbound": "☁ Onedrive" },
       { "rule_set": "geosite-microsoft", "outbound": "🪟 Microsoft" },
       { "rule_set": "geosite-crypto", "outbound": "🪙 Crypto" },      
@@ -189,7 +199,7 @@
       { "tag": "geosite-onedrive", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/onedrive.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-crypto", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-cryptocurrency.json", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-emby", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/marlunzhang/rules/main/emby.json", "download_detour": "🎯 全球直连" },
-      { "tag": "ad", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/REIJI007/AdBlock_Rule_For_Sing-box/main/adblock_reject.srs", "download_detour": "🎯 全球直连" }
+      { "tag": "ad", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/REIJI007/Ad_Rule_For_Sing-box/main/adblock_reject.srs", "download_detour": "🎯 全球直连" }
     ]
   }
 }
