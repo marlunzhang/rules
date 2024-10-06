@@ -195,4 +195,5 @@
       { "tag": "geosite-crypto", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-cryptocurrency.json", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-emby", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/marlunzhang/rules/main/emby.json", "download_detour": "🎯 全球直连" }
     ]
+  }
 }
