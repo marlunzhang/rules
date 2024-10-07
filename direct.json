@@ -2,8 +2,8 @@
   "version": 1,
   "rules": [
     {
-      "domain": [
-        "marlun.dynv6.net"
+      "domain_suffix": [
+        ".dynv6.net"
       ]
     }
   ]
