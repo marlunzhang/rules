@@ -2,9 +2,7 @@
   "version": 1,
   "rules": [
     {
-      "domain_suffix": [
-        ".dynv6.net"
-      ]
+      "domain_suffix": ".dynv6.net"
     }
   ]
 }
