@@ -1,3 +1,5 @@
+# 域名关键字匹配
 DOMAIN-KEYWORD,firefox
 DOMAIN-KEYWORD,18comic
+# 域名后缀匹配
 DOMAIN-SUFFIX,hub.docker.com
