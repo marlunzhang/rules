@@ -3,5 +3,5 @@ DOMAIN,board.zash.run.place
 # 域名关键字匹配
 DOMAIN-KEYWORD,ghfast.top
 # IP段匹配
-# IP-CIDR,101.101.101.101/32,no-resolve
-# IP-CIDR,101.102.103.104/32,no-resolve
+IP-CIDR,1.0.0.1/32,no-resolve
+IP-CIDR,101.102.103.104/32,no-resolve
