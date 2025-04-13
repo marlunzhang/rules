@@ -2,6 +2,7 @@
 DOMAIN,board.zash.run.place
 DOMAIN,api.996444.cn
 DOMAIN,api.gptapi.us
+DOMAIN,spaceship.com
 # 域名关键字匹配
 DOMAIN-KEYWORD,ghfast.top
 DOMAIN-KEYWORD,0ms.dev
