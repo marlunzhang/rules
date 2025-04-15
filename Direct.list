@@ -1,8 +1,8 @@
-# 域名匹配
-DOMAIN,board.zash.run.place
-DOMAIN,api.996444.cn
-DOMAIN,api.gptapi.us
-DOMAIN,lovelivegundam.top
+# 域名后缀匹配
+DOMAIN-SUFFIX,board.zash.run.place
+DOMAIN-SUFFIX,api.996444.cn
+DOMAIN-SUFFIX,api.gptapi.us
+DOMAIN-SUFFIX,lovelivegundam.top
 # 域名关键字匹配
 DOMAIN-KEYWORD,ghfast.top
 DOMAIN-KEYWORD,0ms.dev
