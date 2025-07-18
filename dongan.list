@@ -1,0 +1,6 @@
+# IP段匹配
+IP-CIDR,10.14.1.25/32,no-resolve
+IP-CIDR,10.11.0.140/32,no-resolve
+IP-CIDR,10.11.0.141/32,no-resolve
+IP-CIDR,10.11.0.100/32,no-resolve
+IP-CIDR,10.11.0.153/32,no-resolve
