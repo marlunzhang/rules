@@ -8,8 +8,8 @@
         ".api.gptapi.us",
         ".lovelivegundam.top",
         ".dynv6.com",
-        "ocsp.digicert.com",
-        ".ip.sb"
+        ".xn--ngstr-lra8j.com",
+        ".googleapis.cn"
       ]
     },
     {
@@ -18,11 +18,6 @@
         "0ms.dev",
         "rethinkdns.com"
       ]
-    },
-    {
-      "ip_cidr": [
-        "23.50.21.119/32"
-      ]
-    }    
+    } 
   ]
 }
