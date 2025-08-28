@@ -4,17 +4,17 @@
     {
       "domain_suffix": [
         ".board.zash.run.place",
-        ".469893.xyz",
         ".api.996444.cn",
         ".api.gptapi.us",
         ".lovelivegundam.top",
-        ".dynv6.com",
         ".xn--ngstr-lra8j.com",
         ".googleapis.cn"
       ]
     },
     {
       "domain_keyword": [
+        "469893.xyz",
+        "dynv6.com",
         "gh-proxy",
         "0ms.dev",
         "rethinkdns.com"
