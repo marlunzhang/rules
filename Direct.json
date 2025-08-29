@@ -2,20 +2,16 @@
   "version": 3,
   "rules": [
     {
-      "domain_suffix": [
-        ".board.zash.run.place",
-        ".api.996444.cn",
-        ".api.gptapi.us",
-        ".lovelivegundam.top",
-        ".xn--ngstr-lra8j.com",
-        ".googleapis.cn",
-        ".hzda.org",
-        ".469893.xyz",
-        ".dynv6.com",
-      ]
-    },
-    {
       "domain_keyword": [
+        "board.zash.run.place",
+        "api.996444.cn",
+        "api.gptapi.us",
+        "lovelivegundam.top",
+        "xn--ngstr-lra8j.com",
+        "googleapis.cn",
+        "hzda.org",
+        "469893.xyz",
+        "dynv6.com",
         "gh-proxy",
         "0ms.dev",
         "rethinkdns.com"
