@@ -15,3 +15,6 @@ DOMAIN-KEYWORD,gh-proxy
 DOMAIN-KEYWORD,0ms.dev
 DOMAIN-KEYWORD,rethinkdns.com
 DOMAIN-KEYWORD,tailscale
+
+IP-CIDR,2408:8888::8/128,no-resolve
+IP-CIDR,2408:8899::8/128,no-resolve
