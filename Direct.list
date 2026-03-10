@@ -7,8 +7,11 @@ DOMAIN-SUFFIX,dynv6.com
 DOMAIN-SUFFIX,wqwqwq.sbs
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,googleapis.cn
-DOMAIN-SUFFIX,duckcoding.com
+DOMAIN-SUFFIX,duckcoding.ai
 DOMAIN-SUFFIX,tailscale.com
+DOMAIN-SUFFIX,foxcode.rjj.cc
+DOMAIN-SUFFIX,code.newcli.com
+DOMAIN-SUFFIX,ikuncode.cc
 # 域名关键字匹配
 DOMAIN-KEYWORD,469893.xyz
 DOMAIN-KEYWORD,gh-proxy
