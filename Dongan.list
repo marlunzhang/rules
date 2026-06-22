@@ -13,3 +13,4 @@ IP-CIDR,10.11.1.89/32,no-resolve
 IP-CIDR,10.11.1.153/32,no-resolve
 IP-CIDR,10.11.1.152/32,no-resolve
 IP-CIDR,10.11.3.188/32,no-resolve
+IP-CIDR,10.11.3.234/32,no-resolve
