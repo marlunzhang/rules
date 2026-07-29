@@ -14,6 +14,7 @@ DOMAIN-SUFFIX,code.newcli.com
 DOMAIN-SUFFIX,ikuncode.cc
 DOMAIN-SUFFIX,ai.centos.hk
 DOMAIN-SUFFIX,computetoken.ai
+DOMAIN-SUFFIX,sub1.sntp.me
 # 域名关键字匹配
 DOMAIN-KEYWORD,469893.xyz
 DOMAIN-KEYWORD,gh-proxy
