@@ -5,7 +5,7 @@ DOMAIN-REGEX,^derp.*tailscale\.com
 DOMAIN-SUFFIX,ts.net
 
 # 2. 内网段直连：确保通过 Tailscale 分配的 100.64.x.x 虚拟 IP 访问其他设备时走直连
-IP-CIDR,100.64.0.0/10
+IP-CIDR,100.64.0.0/10,no-resolve
 
 # 3. DERP 中转服务器 IPv4 直连 
 IP-CIDR,199.38.181.104/32,no-resolve
