@@ -7,7 +7,6 @@
         "duckcoding.ai", "tailscale.com", "foxcode.rjj.cc", "code.newcli.com",
         "ikuncode.cc", "computetoken.ai", "sub1.sntp.me", "opencode.ai",
         "frapi.centos.hk", "469893.xyz" ] },
-    { "domain_keyword": [ "469893.xyz", "gh-proxy", "0ms.dev", "rethinkdns.com", "tailscale", "aihub" ] },
-    { "ip_cidr": [ "2408:8888::8/128", "2408:8899::8/128" ] }
+    { "domain_keyword": [ "469893.xyz", "gh-proxy", "0ms.dev", "rethinkdns.com", "tailscale", "aihub" ] }
   ]
 }
