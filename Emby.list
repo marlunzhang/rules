@@ -67,6 +67,7 @@ DOMAIN-SUFFIX,su.viclub.top
 DOMAIN-KEYWORD,odysseyplus
 DOMAIN-KEYWORD,cn2gias
 DOMAIN-KEYWORD,emby
+DOMAIN-KEYWORD,array2026
 
 # IP段匹配
 IP-CIDR,202.61.255.248/32,no-resolve
