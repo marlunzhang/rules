@@ -18,7 +18,6 @@ DOMAIN-SUFFIX,opencode.ai
 DOMAIN-SUFFIX,frapi.centos.hk
 DOMAIN-SUFFIX,469893.xyz
 DOMAIN-SUFFIX,sub1.sntp.me
-DOMAIN-SUFFIX,sidrune.ai
 # 域名关键字匹配
 DOMAIN-KEYWORD,469893.xyz
 DOMAIN-KEYWORD,gh-proxy
@@ -26,6 +25,7 @@ DOMAIN-KEYWORD,0ms.dev
 DOMAIN-KEYWORD,rethinkdns.com
 DOMAIN-KEYWORD,tailscale
 DOMAIN-KEYWORD,aihub
+DOMAIN-KEYWORD,sidrune.ai
 # IP段匹配
 IP-CIDR,2408:8888::8/128,no-resolve
 IP-CIDR,2408:8899::8/128,no-resolve
