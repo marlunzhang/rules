@@ -13,10 +13,9 @@ DOMAIN-SUFFIX,foxcode.rjj.cc
 DOMAIN-SUFFIX,code.newcli.com
 DOMAIN-SUFFIX,ikuncode.cc
 DOMAIN-SUFFIX,computetoken.ai
-DOMAIN-SUFFIX,sub1.sntp.me
 DOMAIN-SUFFIX,frapi.centos.hk
 DOMAIN-SUFFIX,469893.xyz
-DOMAIN-SUFFIX,sub1.sntp.me
+DOMAIN-SUFFIX,sntp.me
 # 域名关键字匹配
 DOMAIN-KEYWORD,469893.xyz
 DOMAIN-KEYWORD,gh-proxy
